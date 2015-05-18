@@ -7,3 +7,4 @@ hadoop jar /usr/hdp/2.2.0.0-2041/hadoop-mapreduce/hadoop-streaming-2.6.0.2.2.0.0
 -file /home/rstudio/knn/reducer.R -reducer "Rscript /home/rstudio/knn/reducer.R" \
 -input /tmp/knn/* -output /tmp/knn2
 
+hadoop fs -cat /tmp/knn2/* > dist_calc.csv
